@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.igogo.bo.mapper.TbLoginInfoMapper">
+    <resultMap id="BaseResultMap" type="com.igogo.bo.entity.TbLoginInfo">
+        <id column="LI_ID" property="liId" jdbcType="BIGINT"/>
+        <result column="LOGIN_NAME" property="loginName" jdbcType="VARCHAR"/>
+        <result column="PASSWORD" property="password" jdbcType="VARCHAR"/>
+        <result column="STATE" property="state" jdbcType="INTEGER"/>
+        <result column="CREATE_BY" property="createBy" jdbcType="BIGINT"/>
+        <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="UPDATE_BY" property="updateBy" jdbcType="BIGINT"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    LI_ID, LOGIN_NAME, PASSWORD, STATE, CREATE_BY, CREATE_TIME, UPDATE_TIME, UPDATE_BY
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_login_info
+        where LI_ID = #{liId,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from tb_login_info
+    where LI_ID = #{liId,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.igogo.bo.entity.TbLoginInfo">
+        <selectKey resultType="java.lang.Long" keyProperty="liId" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into tb_login_info (LOGIN_NAME, PASSWORD, STATE,
+        CREATE_BY, CREATE_TIME, UPDATE_TIME,
+        UPDATE_BY)
+        values (#{loginName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{state,jdbcType=INTEGER},
+        #{createBy,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP},
+        #{updateBy,jdbcType=BIGINT})
+    </insert>
+    <insert id="insertSelective" parameterType="com.igogo.bo.entity.TbLoginInfo">
+        <selectKey resultType="java.lang.Long" keyProperty="liId" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into tb_login_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="loginName != null">
+                LOGIN_NAME,
+            </if>
+            <if test="password != null">
+                PASSWORD,
+            </if>
+            <if test="state != null">
+                STATE,
+            </if>
+            <if test="createBy != null">
+                CREATE_BY,
+            </if>
+            <if test="createTime != null">
+                CREATE_TIME,
+            </if>
+            <if test="updateTime != null">
+                UPDATE_TIME,
+            </if>
+            <if test="updateBy != null">
+                UPDATE_BY,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="loginName != null">
+                #{loginName,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="state != null">
+                #{state,jdbcType=INTEGER},
+            </if>
+            <if test="createBy != null">
+                #{createBy,jdbcType=BIGINT},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null">
+                #{updateBy,jdbcType=BIGINT},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.igogo.bo.entity.TbLoginInfo">
+        update tb_login_info
+        <set>
+            <if test="loginName != null">
+                LOGIN_NAME = #{loginName,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                PASSWORD = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="state != null">
+                STATE = #{state,jdbcType=INTEGER},
+            </if>
+            <if test="createBy != null">
+                CREATE_BY = #{createBy,jdbcType=BIGINT},
+            </if>
+            <if test="createTime != null">
+                CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null">
+                UPDATE_BY = #{updateBy,jdbcType=BIGINT},
+            </if>
+        </set>
+        where LI_ID = #{liId,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.igogo.bo.entity.TbLoginInfo">
+    update tb_login_info
+    set LOGIN_NAME = #{loginName,jdbcType=VARCHAR},
+      PASSWORD = #{password,jdbcType=VARCHAR},
+      STATE = #{state,jdbcType=INTEGER},
+      CREATE_BY = #{createBy,jdbcType=BIGINT},
+      CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+      UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP},
+      UPDATE_BY = #{updateBy,jdbcType=BIGINT}
+    where LI_ID = #{liId,jdbcType=BIGINT}
+  </update>
+
+
+    <select id="selectLoginInfo" parameterType="com.igogo.bo.entity.TbLoginInfo" resultMap="BaseResultMap">
+        select
+          <include refid="Base_Column_List"/>
+        from
+          tb_login_info
+        WHERE
+        LOGIN_NAME = #{loginName,jdbcType=VARCHAR} and
+        PASSWORD = #{password,jdbcType=VARCHAR}
+
+    </select>
+
+</mapper>

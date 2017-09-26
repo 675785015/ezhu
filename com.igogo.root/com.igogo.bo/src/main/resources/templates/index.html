@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+
+    <!-- font-awesome icons -->
+    <!-- //Custom Theme files -->
+    <#include "base.html"/>
+</head>
+<body>
+<div id="nav-overlay" class="nav-w3right">
+    <span class="menu-trigger trigger fa fa-plus" rel="nav-overlay"></span>
+
+    <div>
+        <nav class="w3ls-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="icons.html">Web Icons</a></li>
+                <li><a href="codes.html">Short Codes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- banner -->
+<div class="banner">
+    <div class="banner-layer">
+        <!-- header -->
+        <div class="header-agileits">
+            <div class="w3ls-logo">
+                <h1><a href="index.html"><span>Decor</span>Interior</a></h1>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- //header -->
+        <!-- menu js-->
+        <script src="js/jquery-3.1.1.slim.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.trigger').click(function () {
+                    var $this = $(this),
+                            notThis = $this.hasClass('open'),
+                            thisNav = $this.attr("rel");
+                    //close if you click another menu trigger
+                    if (!notThis) {
+                        $('.triggered-area, .trigger').removeClass('open');
+                        if ($('.trigger').hasClass("block-scroll")) {
+                            $('html').removeClass('disable-scroll');
+                            $('#overlay-mobile').removeClass('visible');
+                        }
+                    }
+                    //open the nav
+                    $this.toggleClass('open');
+                    $("#" + thisNav).toggleClass('open');
+                    if ($(this).hasClass("block-scroll")) {
+                        $('html').toggleClass('disable-scroll');
+                        $('#overlay-mobile').toggleClass('visible');
+                    }
+                });
+            });
+        </script>
+        <!-- //menu js-->
+        <!-- banner-text -->
+        <div class="banner-text-info">
+            <div class="container">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <div class="banner-w3lstext">
+                                <h2>FIRST banner</h2>
+                                <h6>Facilisis nec</h6>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit onmi ornare. </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-w3lstext">
+                                <h3>SECONDE banner</h3>
+                                <h6>Facilisis nec</h6>
+
+                                <p>Integer gravida mauris non mi gravida at sollicitudin odio efficitur.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-w3lstext">
+                                <h3>THIRD banner</h3>
+                                <h6>Facilisis nec</h6>
+
+                                <p>Mauris ex nulla, aliquam ornare facilisis nec convallis pulvinar</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- //banner-text -->
+    </div>
+</div>
+<!-- //banner -->
+<!-- about -->
+<div class="about">
+    <div class="container">
+        <div class="agileits-title">
+            <h3>About Us</h3>
+        </div>
+        <div class="col-md-6 about-w3right">
+            <img src="images/img1.jpg" class="img-responsive" alt=""/>
+        </div>
+        <div class="col-md-6 about-w3left">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h5 class="panel-title asd">
+                            <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
+                                    class="glyphicon glyphicon-minus" aria-hidden="true"></i>assumenda est cliche repren
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne"
+                         aria-expanded="false" style="height: 0px;">
+                        <div class="panel-body panel_text">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                            nesciunt laborum eiusmod.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h5 class="panel-title asd">
+                            <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
+                                    class="glyphicon glyphicon-minus" aria-hidden="true"></i>Itaque earum rerum
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo"
+                         aria-expanded="false" style="height: 0px;">
+                        <div class="panel-body panel_text">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                            nesciunt laborum eiusmod.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h5 class="panel-title asd">
+                            <a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
+                                    class="glyphicon glyphicon-minus" aria-hidden="true"></i>Sed tincidunt lorem sed
+                                velit
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                         aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
+                        <div class="panel-body panel_text">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                            nesciunt laborum eiusmod.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                        <h5 class="panel-title asd">
+                            <a class="pa_italic" role="button" data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><i
+                                    class="glyphicon glyphicon-minus" aria-hidden="true"></i>excepturi sint cliche
+                                henderit
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel"
+                         aria-labelledby="headingFour" aria-expanded="true">
+                        <div class="panel-body panel_text">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                            nesciunt laborum eiusmod.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- //about -->
+<!-- banner-bottom -->
+<div class="banner-bottom jarallax">
+    <div class="col-sm-6 video-w3lsleft">
+        <h4>Wonderful designs taken poss <br/> has voluptatemut enimminim quis nostrum</h4>
+        <iframe src="" allowfullscreen=""></iframe>
+    </div>
+    <div class="col-sm-6 video-w3lsright">
+        <p>Lorem ipsum dolor sit amet, consectetur adipi </p>
+
+        <h3>Magnam aliquam quaerat voluptatemut enim minima veniam, quis nostrum exercitation laboriosam</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis pharetra turpis, a scelerisque enim
+            venenatis luctus. Cras blandit dolor a facilisis tincidunt. Vivamus sed orci aliquam, aliquet tellus ut,
+            ornare nunc. Praesent lacinia elit id libero pulvinar, sit amet faucibus felis ornare Pellentesque nulla
+            lorem.</p>
+        <a class="readmore more" href="#" data-toggle="modal" data-target="#myModal"> Read More</a>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!-- //banner-bottom -->
+<!-- modal -->
+<div class="modal about-modal w3-agileits fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <img src="images/g7.jpg" alt=""/>
+                <h4>Cras rutrum iaculis enim</h4>
+                <h6>23/03/17</h6>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum iaculis enim, non convallis
+                    felis mattis at. Donec fringilla lacus eu pretium rutrum. Cras aliquet congue ullamcorper. Etiam
+                    mattis eros eu ullamcorper volutpat. Proin ut dui a urna efficitur varius. uisque molestie cursus mi
+                    et congue consectetur. </p>
+
+                <p>Maecenas sodales tortor ac ligula ultrices dictum et quis urna. Lorem ipsum dolor sit amet non
+                    convallis felis mattis at etiam pulvinar metus neque, eget porttitor massa vulputate adipiscing elit
+                    cras rutrum iaculis enim. </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //modal -->
+<!-- services -->
+<div class="services">
+    <div class="container">
+        <div class="agileits-title">
+            <h3>Our Services</h3>
+        </div>
+        <div class="services-agileinfo">
+            <div class="col-sm-4 col-xs-6 services-agile-grids">
+                <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                <h4>New Collections</h4>
+
+                <p>Itaque earum rerum hic tenetur a sapiente delectus
+                    reiciendis maiores alias</p>
+            </div>
+            <div class="col-sm-4 col-xs-6 services-agile-grids services-grd-mdl1">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                <h4>Online Advisors</h4>
+
+                <p>Itaque earum rerum hic tenetur a sapiente delectus
+                    reiciendis maiores alias</p>
+            </div>
+            <div class="col-sm-4 col-xs-6 services-agile-grids">
+                <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                <h4>New Designers</h4>
+
+                <p>Itaque earum rerum hic tenetur a sapiente delectus
+                    reiciendis maiores alias</p>
+            </div>
+            <div class="col-sm-4 col-xs-6 services-agile-grids">
+                <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+                <h4>Quality</h4>
+
+                <p>Itaque earum rerum hic tenetur a sapiente delectus
+                    reiciendis maiores alias</p>
+            </div>
+            <div class="col-sm-4 col-xs-6 services-agile-grids services-grd-mdl2">
+                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                <h4>Best Performance</h4>
+
+                <p>Itaque earum rerum hic tenetur a sapiente delectus
+                    reiciendis maiores alias</p>
+            </div>
+            <div class="col-sm-4 col-xs-6 services-agile-grids">
+                <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+                <h4>Privacy</h4>
+
+                <p>Itaque earum rerum hic tenetur a sapiente delectus
+                    reiciendis maiores alias</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!-- //services -->
+<!-- subscribe -->
+<div class="subscribe-agileinfo jarallax">
+    <div class="wthree-sub">
+        <div class="container">
+            <div class="agileits-title">
+                <h3>Subscribe</h3>
+            </div>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Enter your Email..." required=""/>
+                <input type="submit" value="Subscribe"/>
+
+                <div class="clearfix"></div>
+            </form>
+            <div class="w3social-icons w3sub-agileits-icons">
+                <ul>
+                    <li><a href="#" class="fa fa-facebook icon icon-border facebook"> </a></li>
+                    <li><a href="#" class="fa fa-twitter icon icon-border twitter"> </a></li>
+                    <li><a href="#" class="fa fa-google-plus icon icon-border googleplus"> </a></li>
+                    <li><a href="#" class="fa fa-dribbble icon icon-border dribbble"> </a></li>
+                    <li><a href="#" class="fa fa-rss icon icon-border rss"> </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //subscribe -->
+<!-- copy rights start here -->
+<div class="copyw3-agile">
+    <div class="container">
+        <p>Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">
+            &#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+    </div>
+</div>
+<!-- //copy right end here -->
+<!-- js -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/jarallax.js"></script>
+<script src="js/SmoothScroll.min.js"></script>
+<script type="text/javascript">
+    /* init Jarallax */
+    $('.jarallax').jarallax({
+        speed: 0.5,
+        imgWidth: 1366,
+        imgHeight: 768
+    })
+</script>
+<!-- //js -->
+<!-- start-smooth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+
+            $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+        });
+    });
+</script>
+<!-- //end-smooth-scrolling -->
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*
+         var defaults = {
+         containerID: 'toTop', // fading element id
+         containerHoverID: 'toTopHover', // fading element hover id
+         scrollSpeed: 1200,
+         easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({easingType: 'easeOutQuart'});
+
+    });
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- FlexSlider -->
+<script defer="" src="js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+    $(window).load(function () {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            start: function (slider) {
+                $('body').removeClass('loading');
+            }
+        });
+    });
+</script>
+<!-- End-slider-script -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
